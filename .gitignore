@@ -3,7 +3,5 @@ people/
 notebooks/
 enes.obj
 latina.obj
-project_texture.ipynb
-remove_illumination.ipynb
 *.pyc
 *.h5
