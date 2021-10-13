@@ -5,64 +5,36 @@ It is inspired by multiple papers including:
 - https://arxiv.org/pdf/1612.00523.pdf
 It is based on top of the library Pytorch3D to take advantage of its differentiable renders
 
+![Alt text](assets/donald_rendered.jpg?raw=true "Donald rendered")
+
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This project has been developped with python 3.8.5
+It is highly recommended to make use of GPUs to avoid very
+long computation time. (GTX1090 has been used for development)
 
-### Prerequisites
+To run the project locally follow these steps:
+- Create a conda environment with the version 3.8.5 of python
+- Install dependencies with pip3 install -r requirements.txt
+  You might face difficulties to install Pytorch3D, if so please refer to
+  https://github.com/facebookresearch/pytorch3d/ for help
+- Download the Basel Face Model (BFM) from the website https://faces.dmi.unibas.ch/bfm/bfm2019.html
+  The file you should download is model2019_fullHead.h5
+  Then copy it to the folder modelling.
+- Then run "python3 main.py"
+  By default it will run a face fitting of Donald Trump which photo is stored in people/tests/donald.jpg and store the rendered 3D face fitted mesh in the render folder of the directory.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+### Fitting you own photos
+If you want to run a 3D face fitting on your own photos, please follow these steps:
+- create a folder in people/tests containing a single photo you want to fit
+- run "python3 main.py"
 
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+This code is free to use for academic research purpose but not for commercial purposes.
 
 
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
+Raphael Jaiswal - rjaiswal@hotmail.fr

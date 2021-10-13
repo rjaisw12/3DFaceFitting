@@ -5,7 +5,6 @@ which encapsulate all the information regarding an image:
 - landmark files
 """
 
-import glob
 import os
 from pathlib import Path
 from typing import Dict
@@ -67,9 +66,6 @@ class DataHandler:
 
             Path(self.folder + "images/").mkdir(parents=True, exist_ok=True)
             generate_gaussian_pyramid(self.folder, main_image)
-            files = glob.glob(self.folder + "*.jpg")
-            for f in files:
-                os.remove(f)
 
         full_image = Image.open(self.folder + "images/full.jpg")
         half_image = Image.open(self.folder + "images/half.jpg")
