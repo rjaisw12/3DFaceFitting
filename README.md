@@ -3,6 +3,7 @@ This project aims to reconstruct a 3D face mesh given a single color image.
 It is inspired by multiple papers including:
 - https://niessnerlab.org/papers/2015/11face/thies2015realtime.pdf
 - https://arxiv.org/pdf/1612.00523.pdf
+
 It is based on top of the library Pytorch3D to take advantage of its differentiable renders
 
 ![Alt text](assets/donald_rendered.jpg?raw=true "Donald rendered")
